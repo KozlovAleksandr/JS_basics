@@ -146,7 +146,9 @@ console.log(priceLowToHigh);
 // ----------- ЗАДАНИЕ 5 -----------
 
 let arr = [];
-for (; range();) {}
+for (; range();) {
+
+}
 
 function range() {
   let i = 0;
