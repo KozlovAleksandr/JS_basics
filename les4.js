@@ -96,3 +96,36 @@ let messageES6 = new AttachedPost2('Famous', 'Winter', '30.12');
 messageES6.edit('Summer');
 messageES6.makeTextHighlighted();
 console.log(messageES6);
+
+// ----------- ЗАДАНИЕ 1 -----------
+
+class DigitObj {
+  constructor(units, tens, hundereds) {
+    this.units = units;
+    this.tens = tens;
+    this.hundereds = hundereds;
+  }
+}
+let digitals = new DigitObj();
+
+/**
+ * Функция запрашивает число от 0 до 999 ,
+ * разбивает указанное число на разряды 
+ * и передаёт в конструктор
+ */
+function fillObject() {
+  let num = prompt("Введите число от 0 до 999");
+  if (Number.isInteger(+num) && num.length < 4) {
+
+    let unit = num % 10;
+    let ten = Math.floor(num % 100 / 10);
+    let hundered = Math.floor(num / 100);
+    digitals = new DigitObj(unit, ten, hundered);
+    console.log(digitals);
+  } else {
+    alert("Ввели что-то не то");
+    console.log(digitals);
+  }
+}
+
+fillObject();
